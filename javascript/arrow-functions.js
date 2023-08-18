@@ -1,15 +1,28 @@
 // Write an arrow function that returns 2.
-const giveMeTwo = undefined; // Replace `undefined` with your code
+const giveMeTwo = () => 2
+
+const result = giveMeTwo()
+console.log(result)
+
+// Replace `undefined` with your code
 
 // Write an arrow function that takes in a movie and returns '<movie> is the best movie
 // ever!' where <movie> is the argument passed into the function.
-const bestMovie = undefined; // Replace `undefined` with your code
+const bestMovie = (str) => `${str} is the best movie ever!`
 
 // Write an arrow function called 'compareNums' that takes in 2 parameters,
 // which will be numbers.
 // The function should return the bigger number.
 // If the numbers are the same, just return the number.
-const compareNums = undefined; // Replace `undefined` with your code
+const compareNums = (num1, num2) => {
+  if (num1 > num2)
+    return num1
+  else if (num2 > num1)
+    return num2
+  else if (num2 === num1)
+    return num1
+  }
+
 
 const foods = [
   {
@@ -43,6 +56,11 @@ const foods = [
 // and then adding the results together.
 function addCalories() {
   // Replace this with your code
+foods.forEach(food => {
+  const calories = (food.carbs*4) + (food.protein * 4) + (food.fat * 9)
+  food.calories = calories
+});
+
   return foods;
 }
 
@@ -81,6 +99,9 @@ const products = [
 // and return it.
 function getSaleProducts() {
   // Replace this with your code
+
+
+
 }
 
 // A customer has placed an order - they want one of every product that has blue on it.

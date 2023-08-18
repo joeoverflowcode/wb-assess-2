@@ -16,7 +16,16 @@
 // - manufacturer (String): the manufacturer of the bicycle
 class Bicycle {
   // Replace this with your code
+  constructor (color, manufacturer, numWheels = 2 ){
+    this.color = color
+    this.manufacturer = manufacturer
+    this.numWheels = numWheels
+  }
+
 }
+const bike = new Bicycle('blue', 'Huffy')
+console.log(bike)
+
 
 // This User class is intended to be used in a web application where users can
 // log in with a username and password.
@@ -35,6 +44,10 @@ class User {
 
   processChangePassword(currentPassword, newPassword) {
     // Replace this with your code
+    if (currentPassword === this.password){
+      this.password = newPassword
+      return true
+    } else return false
   }
 }
 
@@ -60,10 +73,13 @@ class Library {
 
   createAndAddBook(title, author) {
     // Replace this with your code
+    const book = new Book(title, author)
+      this.books.push(book)
   }
 
   findBooksByAuthor(author) {
     // Replace this with your code
+    return this.books.filter(book => book.author === author )
   }
 }
 
@@ -96,6 +112,16 @@ class Rectangle {
 
 class Square extends Rectangle {
   // Replace this with your code
-}
+  constructor (length) {
+  super(length, length)
+  }
 
+
+getArea() {
+  if (this.length === this.width)
+  return this.length * this.length
+  else 
+  return undefined
+}
+}
 export { Bicycle, Book, Library, Rectangle, Square, User };

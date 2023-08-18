@@ -4,7 +4,8 @@
 // - an array of strings: 'apple', 'berry', 'cherry'
 // - the boolean value true
 function myArr() {
-  // Replace this with your code
+return [4, 'abc', ['apple', 'berry', 'cherry'], true]
+  
 }
 
 // The following array, `nestedLetters`, contains many levels of nested arrays.
@@ -12,7 +13,8 @@ function myArr() {
 function getZ() {
   const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a'];
 
-  // Replace this with your code
+    const gotZ = nestedLetters[5][2][1]
+ return gotZ
 }
 
 // Use the spread operator to combine the following arrays into one array and return it.
@@ -22,16 +24,18 @@ function flatAnimals() {
   const savannah = ['lion', 'zebra', 'lion', 'giraffe'];
   const desert = ['rattlesnake', 'coyote'];
 
-  // Replace this with your code
+  const combinedArray = [...forest, ...ocean, ...savannah, ...desert]
+  return combinedArray
 }
 
 // Now use the spread operator to return a copy of the animals array with 'elephant' at
 // the end.
 function animalsWithElephant() {
-  const animals = ['aardvark', 'bear', 'cat'];
-
-  // Replace this with your code
+  const animals = ['aardvark', 'bear', 'cat']
+  const withElephant = [...animals, 'elephant']
+  return withElephant
 }
+
 
 // You don't agree with the rating for Splendor,
 // delete the rating property off of the gameInfo object.
@@ -45,10 +49,12 @@ function improveGameRating() {
     rating: 1,
   };
 
-  // Replace this with your code
+  delete gameInfo.rating
 
   return gameInfo;
 }
+
+
 
 // You only like even numbers, so get rid of the other shapes by
 // looping over the shapes object and deleting any property whose value is odd number.
@@ -64,9 +70,17 @@ function evenShapes() {
   };
 
   // Replace this with your code
+  for (const shape in shapes) {
+    if (shapes[shape] % 2 !== 0) {
+      delete shapes[shape]; 
+    }
+  }
 
   return shapes;
 }
+
+
+
 
 // Write a for loop that loops over the courses array,
 // nest a for in loop to loop over each object.
@@ -100,9 +114,14 @@ function betterCourses() {
     },
   ];
 
-  // Replace this with your code
+  // for(let i = 0; i < courses.length; i++){
+  //   const course = courses[i]
+  //   for (const property in course ){
+  //     if (type)
+  //   }
+  // }
 
-  return courses;
+  // return courses;
 }
 
 // Use nested for loops to compare the letters in the lettersToPair array below.
