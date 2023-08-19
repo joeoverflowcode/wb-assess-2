@@ -2,19 +2,15 @@
 
 
 header{
-    background-color: black;
+    background-color: rgb(21, 22, 21);
     font-family: "Nunito Sans";
-    font-weight: 500;
-    font-size: 18px;
     display: flex;
     justify-content: space-between;
-    padding-left: 40px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding:30px 40px 30px
 }
 
 .logo{
-    background-color: black;
+    background-color:   rgb(21, 22, 21);
     color: dodgerblue;
     font-size: x-large;
     font-weight:bolder;
@@ -22,7 +18,7 @@ header{
 
 .nav-links li{
     display: inline-block;
-    padding: 0px 40px;
+    padding: 10px 30px;
 }
 
 .nav-links li a{
@@ -32,7 +28,40 @@ header{
 
 
 
+main{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
 
+article{
+    width: 60vw;
+
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items:normal
+
+}
+.profile{
+    border: 2px solid;
+    width: 250px;
+    height: 300px;
+}
+
+ol{
+    border: 2px solid;
+    width: 250px;
+    height:350px
+}
+
+footer{
+    background-color: dodgerblue;
+    width: 100%;
+    height: 150px;
+}
 /* 
 #logo{
     margin-left: 40px;
