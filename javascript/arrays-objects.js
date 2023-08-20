@@ -114,14 +114,16 @@ function betterCourses() {
     },
   ];
 
-  // for(let i = 0; i < courses.length; i++){
-  //   const course = courses[i]
-  //   for (const property in course ){
-  //     if (type)
-  //   }
-  // }
+  for(let i = 0; i < courses.length; i++){
+    const course = courses[i]
+    for (const property in course ){
+      if (course[property] === true){
+        course[property] = false
+      }
+    }
+  }
 
-  // return courses;
+  return courses;
 }
 
 // Use nested for loops to compare the letters in the lettersToPair array below.
@@ -131,10 +133,18 @@ function betterCourses() {
 // Notice that each pair appears only *once* in the final array (i.e. [[0,3], [1, 2]] is ok
 // but not [[0, 3], [1, 2], [2, 1], [3,0]]).
 function findPairs() {
-  const lettersToPair = ['e', 'k', 's', 'a', 'e', 's', 'a', 'n', 'k', 'n'];
-  const pairsArray = [];
 
-  // Replace this with your code
+  const lettersToPair = ['e', 'k', 's', 'a', 'e', 's', 'a', 'n', 'k', 'n']
+  const pairsArray = []
+
+for (let i = 0; i<lettersToPair.length -1; i++){
+
+  for(let j = i+1; j< lettersToPair.length; j++){
+    if (lettersToPair[i] === lettersToPair[j]){
+      pairsArray[pairsArray.length] = [i,j]
+    }
+  }
+}
 
   return pairsArray;
 }
